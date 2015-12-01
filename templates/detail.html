@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<center><h1>Currency: {{ currency.identifier }} </h1></center>
+ <b>Identifier: </b>{{ currency.identifier }} <p>
+     <b>Long Name: </b>{{ currency.long_name }} 
+    <!--We'll use an html form to get a currency identifier and amount to be converted--> 
+<p><b>Please select the cross rate and click on the convert button</b>  
+<form name="rate_selection_form" action="{% url 'exch_rates' currency.identifier %}" method ="GET">
+     <select name="Cross_Currency_List">
+     {% for rates in currency.rates_set.all %} 
+    <option name="rates" value={{ rates.id }}> {{ rates.id_2 }} </option> 
+{% endfor %}
+     </select>
+     <input type="text" value="1" name="Conversion_Amount">
+     <input type="submit" value="Convert" name="convert" />
+    <input type="submit" value="Reset" name="reset" />
+</form>
+This is more complex stuff
+</body>
+</html>

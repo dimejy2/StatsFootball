@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if currency_list %}
+    <!--Currency list will come from the python index function --> 
+    <center><h1>Available currencies</h1><p> </center> 
+    <ul>     {% for currency in currency_list %} 
+        <li>
+            <a href="/my_app/{{ currency.identifier }}/">{{ currency.long_name }}</a></li>
+             {% endfor %} 
+    </ul> 
+{% else %} 
+    <p>The list of currencies is empty..</p>
+    {% endif %}
+
+</body>
+</html>

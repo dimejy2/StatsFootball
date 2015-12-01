@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!-- See 8 - passing the Player objects into the template -->
+
+    <table class="table table-striped" style="color:midnightblue">
+        <tr>
+            <th>Name</th>
+            <th>Stat1</th>
+            <th>Stat2</th>
+            <th>Stat3</th>
+            <th>Stat4</th>
+            <th>Stat5</th>
+            <th>Stat6</th>
+            <th>Stat7</th>
+        </tr>
+            {% for object in Players %}
+                <tr>
+                    <td>{{ object.name }}</td>
+                    <td>{{ object.stat1 }}</td>
+                    <td>{{ object.stat2 }}</td>
+                    <td>{{ object.stat3 }}</td>
+                    <td>{{ object.stat4 }}</td>
+                    <td>{{ object.stat5 }}</td>
+                    <td>{{ object.stat6 }}</td>
+                    <td>{{ object.stat7 }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+
+
+</body>
+</html>

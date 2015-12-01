@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('my_app', '0008_remove_player_stat8'),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name='player',
+            name='stat8',
+            field=models.CharField(blank=True, max_length=30),
+        ),
+    ]
